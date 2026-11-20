@@ -44,7 +44,7 @@ export const fetchNotes = async ({
     params.search = search.trim();
   }
 
-  if (tag && tag !== "All") {
+  if (tag && tag.toLocaleLowerCase() !== "all") {
     params.tag = tag;
   }
 
